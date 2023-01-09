@@ -17,13 +17,16 @@ download_file() {
     wget -nc $URL_PREFIX/$remote -O $filename
 }
 
+# apt
+apt install vim git
+
 # ~/.bashrc
 if ! [ -e ~/.bashrc ]; then
     touch ~/.bashrc
 fi
 
 if ! egrep -Fxq "set -o vi" ~/.bashrc; then
-    echo "set -o vi" >> ~/.bashrc
+    echo "\nset -o vi\n" >> ~/.bashrc
 fi
 
 # ~/.inputrc
