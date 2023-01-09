@@ -1,0 +1,12 @@
+[user]
+	name = Longxiao Zhang
+	email = zhanglongx@gmail.com
+[rebase]
+	pull = true
+	autoStash = true
+[credential]
+	helper = manager
+[core]
+    quotepath = off
+[clean]
+    requireForce = false
