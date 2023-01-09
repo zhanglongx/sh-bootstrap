@@ -22,7 +22,7 @@ if ! [ -e ~/.bashrc ]; then
     touch ~/.bashrc
 fi
 
-if ! egrep -xq "^set -o vi$" ~/.bashrc; then
+if ! egrep -xq "set -o vi" ~/.bashrc; then
     echo -e "\nset -o vi\n" >> ~/.bashrc
 fi
 
