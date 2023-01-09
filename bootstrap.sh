@@ -1,7 +1,5 @@
 #! /usr/bin/env bash
 
-set -x
-
 URL_PREFIX=https://raw.githubusercontent.com/zhanglongx/sh-bootstrap/main
 
 failed_exit()
