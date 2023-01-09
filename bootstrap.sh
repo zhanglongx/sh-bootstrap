@@ -18,7 +18,7 @@ download_file() {
 }
 
 # apt
-apt install vim git
+apt install vim git -y
 
 # ~/.bashrc
 if ! [ -e ~/.bashrc ]; then
