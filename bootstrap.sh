@@ -2,7 +2,7 @@
 
 set -x
 
-USERNAME=zhlx
+URL_PREFIX=https://raw.githubusercontent.com/zhanglongx/sh-bootstrap/main
 
 failed_exit()
 {
@@ -10,17 +10,29 @@ failed_exit()
     exit 1
 }
 
-adduser_ubuntu() {
-    name=$1
+download_file() {
+    remote=$1
+    filename=$2
 
-    adduser $USERNAME
-    usermod -aG sudo $USERNAME
+    wget -nc $URL_PREFIX/$remote -O $filename
 }
 
-[ `id -u` = 0 ] || failed_exit "$0 *MUST* ran by root or sudo"
-
-if egrep -q "^$USERNAME:" /etc/passwd; then
-    failed_exit "$USERNAME already exists"
+# ~/.bashrc
+if ! [ -e ~/.bashrc ]; then
+    touch ~/.bashrc
 fi
 
-adduser_ubuntu
+if ! egrep -Fxq "set -o vi" ~/.bashrc; then
+    echo "set -o vi" >> ~/.bashrc
+fi
+
+# ~/.inputrc
+download_file _inputrc ~/.inputrc
+
+# ~/.gitconfig
+download_file _gitconfig ~/.gitconfig
+
+# ~/.vimrc
+download_file _vimrc ~/.vimrc
+
+echo "Done. please re-login"
