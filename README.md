@@ -30,11 +30,11 @@ Then edit ~/.ssh/config
 ```config
     Host <alias>
       HostName <host>
-      User zhlx
+      [User zhlx]
       [ForwardX11 yes]
 ```
 
-## Apt(ubuntu)
+## install (debian)
 
 ```bash
     $ apt install vim git -y
