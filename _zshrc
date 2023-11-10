@@ -1,0 +1,32 @@
+bindkey -v
+
+ORIGINAL_PS1="%n@%m %1~ %# "
+
+function update-prompt-with-vi-mode {
+  local vi_mode_indicator
+  case $KEYMAP in
+    (vicmd) vi_mode_indicator=":";;
+    (main|viins) vi_mode_indicator="+";;
+    (*) return;;
+  esac
+
+  PS1="${vi_mode_indicator}${ORIGINAL_PS1}"
+}
+
+function zle-keymap-select {
+  update-prompt-with-vi-mode
+  zle reset-prompt
+}
+
+zle -N zle-keymap-select
+
+function zle-line-init {
+  update-prompt-with-vi-mode
+  zle reset-prompt
+}
+
+zle -N zle-line-init
+
+PS1="${ORIGINAL_PS1}"
+
+set -o vi
