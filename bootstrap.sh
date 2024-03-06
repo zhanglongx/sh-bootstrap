@@ -21,6 +21,7 @@ if ! [ -e ~/.bashrc ]; then
 fi
 
 if ! egrep -xq "set -o vi" ~/.bashrc; then
+    echo -e "\nexport EDITOR=vim\n" >> ~/.bashrc
     echo -e "\nset -o vi\n" >> ~/.bashrc
 fi
 

@@ -1,6 +1,6 @@
 bindkey -v
 
-ORIGINAL_PS1="%n@%m %1~ %# "
+ORIGINAL_PS1=$PS1
 
 function update-prompt-with-vi-mode {
   local vi_mode_indicator
