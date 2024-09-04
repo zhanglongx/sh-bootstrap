@@ -21,7 +21,7 @@ if ! [ -e ~/.bashrc ]; then
 fi
 
 if ! egrep -xq "set -o vi" ~/.bashrc; then
-    echo -e "\nexport EDITOR=vim\n" >> ~/.bashrc
+    echo -e "\nexport EDITOR=vim" >> ~/.bashrc
     echo -e "\nset -o vi\n" >> ~/.bashrc
 fi
 
@@ -30,6 +30,10 @@ download_file _inputrc ~/.inputrc
 
 # ~/.gitconfig
 download_file _gitconfig ~/.gitconfig
+
+# ~/.pip/pip.conf
+mkdir -p ~/.pip
+download_file _pip.conf ~/.pip/pip.conf
 
 # ~/.vimrc
 download_file _vimrc ~/.vimrc
