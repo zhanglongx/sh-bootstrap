@@ -38,4 +38,11 @@ download_file _pip.conf ~/.pip/pip.conf
 # ~/.vimrc
 download_file _vimrc ~/.vimrc
 
+# github_release.sh
+download_file github_release.sh github_release.sh
+
+bash github_release.sh ropen
+
+rm -f github_release.sh
+
 echo "Done. please re-login"
