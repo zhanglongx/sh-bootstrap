@@ -1,9 +1,9 @@
 #!/bin/bash
 # A simple script to download and install the latest release of a GitHub repository
 # the release assets should be packages (deb or rpm) for the current arch:
-#  - <app>-<version>-<arch>.deb
-#  - <app>_<version>_<rel-version>.<arch>.rpm
-# FIXME: app name should NOT contain "deb", "rpm"
+#  - <app>_<version>_<arch>.deb
+#  - <app>-<version>-<rel-version>.<arch>.rpm
+# FIXME: repository name should not contain 'deb' or 'rpm'
 
 REPO_OWNER="zhanglongx"
 
