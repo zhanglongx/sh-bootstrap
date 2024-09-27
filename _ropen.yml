@@ -1,0 +1,6 @@
+preferips:
+  - 10.1.41.0
+issuer:
+  capath: /etc/ropen/ropenCA.crt
+  keypath: /etc/ropen/ropenCA.key
+

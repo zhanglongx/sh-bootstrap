@@ -40,6 +40,7 @@ download_file _vimrc ~/.vimrc
 
 # github_release.sh
 download_file github_release.sh github_release.sh
+download_file _ropen.yml ~/.ropen.yml
 
 bash github_release.sh ropen
 
