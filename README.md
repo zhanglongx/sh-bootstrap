@@ -43,5 +43,5 @@ Then edit ~/.ssh/config
 ## bootstrap
 
 ```bash
-    $ wget -O - https://raw.githubusercontent.com/zhanglongx/sh-bootstrap/main/bootstrap.sh | bash
+    $ wget -O - https://www.gemini67.com/sh-bootstrap | bash
 ```
